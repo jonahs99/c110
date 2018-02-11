@@ -25,7 +25,7 @@ func SavePNG(img *image.Gray, path string) {
 }
 
 // DrawLine draws the tape at the specified index on the image
-func DrawLine(img *image.Gray, line Tape, index int) {
+func DrawLine(img *image.Gray, line *Tape, index int) {
 	bounds := img.Bounds()
 	w := bounds.Max.X
 

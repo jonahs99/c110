@@ -2,7 +2,7 @@
 package elemulator
 
 // Iterate returns a single iteration of rule110
-func Iterate(src Tape) Tape {
+func Iterate(src *Tape) *Tape {
 	in := src.data
 	grow := in[len(in)-1]>>63 == 1
 
@@ -32,5 +32,5 @@ func Iterate(src Tape) Tape {
 		out[len(y)] = 1
 	}
 
-	return Tape{out}
+	return &Tape{out}
 }

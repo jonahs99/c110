@@ -1,6 +1,6 @@
 # c110 - A c compiler for a rule-110 virtual machine
 
-![A glider passing through ether](ether.png)
+![Evolution from a random initial condition](110.png)
 
 ## Premise
 
