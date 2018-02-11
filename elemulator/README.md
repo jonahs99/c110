@@ -1,0 +1,1 @@
+# A simple elementary cellular automata emulator
