@@ -5,5 +5,5 @@
 ## Premise
 
 * A rule-110 emulator simulates a turing machine which
-* Simulates an 8 bit computer which
-* Has your c program loaded into it
+* Simulates a simple virtual machine which
+* Runs your compiled program
