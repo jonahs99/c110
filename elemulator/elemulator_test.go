@@ -1,6 +1,8 @@
 package elemulator
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestIterate(t *testing.T) {
 	// 1, 3, 7, 13, 31, 49, 115, 215, 509, 775, 1805
@@ -19,9 +21,19 @@ func TestIterate(t *testing.T) {
 		{509, 775},
 	}
 	for _, c := range cases {
-		got := Iterate(c.in)
+		got := Iterate(NewTape(c.in)).data[0]
 		if got != c.want {
 			t.Errorf("Iterate(%b) == %b, want %b", c.in, got, c.want)
 		}
+	}
+}
+
+func TestIterateGrow(t *testing.T) {
+	in := NewTape(0, uint64(3)<<62)
+	want := NewTape(0, uint64(3)<<62, 1)
+
+	got := Iterate(in)
+	if !Compare(got, want) {
+		t.Errorf("Iterate(%v) == %v, want %v", in, got, want)
 	}
 }
