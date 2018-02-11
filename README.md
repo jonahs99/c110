@@ -1,4 +1,4 @@
-# c110 - A c compiler for a [rule-110](http://mathworld.wolfram.com/Rule110.html) virtual machine
+# c110 - A compiler for a [rule-110](http://mathworld.wolfram.com/Rule110.html) virtual machine
 
 ![Evolution from a random initial condition](110.png)
 
