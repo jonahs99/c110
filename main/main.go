@@ -5,11 +5,15 @@ import (
 )
 
 func main() {
-	img := elemulator.NewImage(400, 400)
-	tape := elemulator.NewRandTape(400/64 + 1)
+	breadth := 50000
+	time := 100000
 
-	for i := 0; i < 400; i++ {
-		tape = elemulator.Iterate(tape)
+	img := elemulator.NewImage(breadth, time)
+	tape := elemulator.NewRandTape(breadth / 2 / 64)
+
+	elemulator.DrawLine(img, tape, 0)
+	for i := 1; i < time; i++ {
+		tape = elemulator.Iterate(tape, tape, tape)
 		elemulator.DrawLine(img, tape, i)
 	}
 

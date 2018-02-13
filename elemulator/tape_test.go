@@ -14,9 +14,9 @@ func TestNewRandTape(t *testing.T) {
 	testLen := 10
 	tape := NewRandTape(testLen)
 
-	got := len(tape.data)
+	got := len(tape.dataL)
 	if got != testLen {
-		t.Errorf("len(NewRandTape(%d)) == %d, want %d", testLen, got, testLen)
+		t.Errorf("len(NewRandTape(%d).dataL) == %d, want %d", testLen, got, testLen)
 	}
 }
 
