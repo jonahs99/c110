@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	breadth := 50000
+	breadth := 1000
 	time := 100000
 
 	img := elemulator.NewImage(breadth, time)
@@ -14,7 +14,7 @@ func main() {
 	elemulator.DrawLine(img, tape, 0)
 	for i := 1; i < time; i++ {
 		tape = elemulator.Iterate(tape, tape, tape)
-		elemulator.DrawLine(img, tape, i)
+		go elemulator.DrawLine(img, tape, i)
 	}
 
 	elemulator.SavePNG(img, "out.png")
